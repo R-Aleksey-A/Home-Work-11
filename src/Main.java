@@ -21,6 +21,18 @@ public class Main {
         }
     }
 
+    public static void numberOfdeliveryDasy(int deliveryDistance){
+    int deliveryTime = 1;
+        if (deliveryDistance <= 20) {
+        System.out.println("Доставка займет сутки");
+    } else if (deliveryDistance <= 60) {
+        System.out.println("Потребуется дней: " + (deliveryTime + 1));
+    } else if (deliveryDistance <= 100) {
+        System.out.println("Потребуется дней: " + (deliveryTime + 2));
+    } else {
+        System.out.println("Доставки нет");
+    }}
+
         public static void main (String[]args){
             System.out.println("Home Work-11");
             System.out.println("Задание-1");
@@ -34,6 +46,12 @@ public class Main {
             int clientOs = 0;
             {
                 getClientOS(clientOs, clientDeviceYear);
+            }
+
+            System.out.println("Задание-3");
+            int deliveryDistance = 1;
+            {
+                numberOfdeliveryDasy(deliveryDistance);
             }
         }
     }
