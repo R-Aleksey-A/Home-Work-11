@@ -19,39 +19,43 @@ public class Main {
         } else {
             System.out.println("Установите версию приложения для Android по ссылке");
         }
+
     }
 
-    public static void numberOfdeliveryDasy(int deliveryDistance){
-    int deliveryTime = 1;
+    public static int numberOfDeliveryDasy(int deliveryDistance) {
         if (deliveryDistance <= 20) {
-        System.out.println("Доставка займет сутки");
-    } else if (deliveryDistance <= 60) {
-        System.out.println("Потребуется дней: " + (deliveryTime + 1));
-    } else if (deliveryDistance <= 100) {
-        System.out.println("Потребуется дней: " + (deliveryTime + 2));
-    } else {
-        System.out.println("Доставки нет");
-    }}
-
-        public static void main (String[]args){
-            System.out.println("Home Work-11");
-            System.out.println("Задание-1");
-            int year = 2019;
-            {
-                determineYear(year);
-            }
-
-            System.out.println("Задание-2");
-            int clientDeviceYear = 2014;
-            int clientOs = 0;
-            {
-                getClientOS(clientOs, clientDeviceYear);
-            }
-
-            System.out.println("Задание-3");
-            int deliveryDistance = 1;
-            {
-                numberOfdeliveryDasy(deliveryDistance);
-            }
+            return 1;
+        } else if (deliveryDistance <= 60) {
+            return 2;
+        } else if (deliveryDistance <= 100) {
+            return 3;
+        } else {
+            return 0;
         }
     }
+
+    public static void main(String[] args) {
+        System.out.println("Home Work-11");
+        System.out.println("Задание-1");
+        int year = 2019;
+        {
+            determineYear(year);
+        }
+
+        System.out.println("Задание-2");
+        int clientDeviceYear = 2014;
+        int clientOs = 0;
+        {
+            getClientOS(clientOs, clientDeviceYear);
+        }
+
+        System.out.println("Задание-3");
+        int deliveryDistance = 100;
+        int dasy = numberOfDeliveryDasy(deliveryDistance);
+        if (dasy > 0) {
+            System.out.println("Потребуется дней: " + dasy);
+        } else {
+            System.out.println("Доставки нет.");
+        }
+    }
+}
